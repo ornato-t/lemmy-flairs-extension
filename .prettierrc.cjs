@@ -3,11 +3,11 @@
  */
 module.exports = {
   printWidth: 80,
-  tabWidth: 2,
+  tabWidth: 4,
   useTabs: false,
-  semi: false,
-  singleQuote: false,
-  trailingComma: "none",
+  semi: true,
+  singleQuote: true,
+  trailingComma: "es5",
   bracketSpacing: true,
   bracketSameLine: true,
   plugins: [require.resolve("@plasmohq/prettier-plugin-sort-imports")],

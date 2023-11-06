@@ -3,13 +3,29 @@
     let action: string = null;
     function increment() {
         count += 1;
-        action = "increment";
+        action = 'increment';
     }
     function decrement() {
         count -= 1;
-        action = "decrement";
+        action = 'decrement';
     }
 </script>
+
+<div>
+    <h2 class="text-center">
+        Welcome to your
+        <a href="https://www.plasmo.com" target="_blank" rel="noreferrer">
+            Plasmo
+        </a>
+        Extension!
+    </h2>
+    <div class="container">
+        <button on:click={decrement}>-</button>
+        <p>Current count: <b>{count}</b></p>
+        <button on:click={increment}>+</button>
+    </div>
+    {#if action}<p class="action text-center">{action}</p>{/if}
+</div>
 
 <style>
     .container {
@@ -27,15 +43,3 @@
         text-align: center;
     }
 </style>
-
-<div>
-    <h2 class="text-center">
-      Welcome to your <a href="https://www.plasmo.com" target="_blank">Plasmo</a> Extension!
-    </h2>
-    <div class="container">
-        <button on:click={decrement}>-</button>
-        <p>Current count: <b>{count}</b></p>
-        <button on:click={increment}>+</button>
-    </div>
-    {#if action}<p class="action text-center">{action}</p>{/if}
-</div>
